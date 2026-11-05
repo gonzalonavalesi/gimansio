@@ -30,5 +30,7 @@ public class Rutina {
     @Builder.Default
     private List<RutinaEjercicio> ejercicios=new ArrayList<>();
 
+    @Column(nullable = false)
+    private Integer orden;
 
 }
