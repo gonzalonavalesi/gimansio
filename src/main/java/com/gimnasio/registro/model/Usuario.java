@@ -1,5 +1,6 @@
 package com.gimnasio.registro.model;
 
+import com.gimnasio.registro.enums.GrupoMuscular;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
