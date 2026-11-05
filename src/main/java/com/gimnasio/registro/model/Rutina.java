@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -11,6 +12,7 @@ import java.util.ArrayList;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "rutinas")
+@Builder
 public class Rutina {
 
     @Id
@@ -26,7 +28,7 @@ public class Rutina {
 
     @OneToMany(mappedBy = "rutina",cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
-    private List<RutinaEjercicio>ejercicios=new ArrayList<>();
+    private List<RutinaEjercicio> ejercicios=new ArrayList<>();
 
 
 }
