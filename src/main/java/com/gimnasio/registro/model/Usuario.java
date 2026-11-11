@@ -5,14 +5,12 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Getter @Setter
 @AllArgsConstructor
+@Builder
 @NoArgsConstructor
 @Table(name = "usuarios")
 public class Usuario {
@@ -27,7 +25,7 @@ public class Usuario {
     private String apellido;
 
     @Column(nullable = false,length = 60)
-    private String correo;
+    private String email;
 
     @Column(nullable = false,length = 60)
     private String password;

@@ -1,5 +1,6 @@
 package com.gimnasio.registro.dto.request;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
@@ -26,4 +27,8 @@ public class UsuarioRequestDTO {
             message = "La contraseña debe incluir al menos una letra mayúscula y al menos dos números"
     )
     private String password;
+
+    @NotBlank(message = "El correo es obligatorio")
+    @Email(message = "El correo debe tener un formato válido")
+    private String email;
 }
